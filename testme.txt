@@ -1,0 +1,104 @@
+initial: Привет.
+initial: Здарова
+final: Жизнь жесткая. Держись!
+quit: пока
+quit: у
+quit: done
+
+pre: пк копьютер
+pre: комп копьютер
+pre: системник копьютер
+pre: pc копьютер
+pre: помнишь помнить
+
+post: am are
+post: your my
+post: yours mine
+post: me you
+post: myself yourself
+post: yourself myself
+post: i you
+post: you me
+post: my your
+post: me you
+post: i'm you are
+post: sasha you
+post: меня you
+
+post: sasha ты
+post: меня ты
+post: ты я
+post: я ты 
+
+
+synon: family mother mom father dad sister brother wife children child
+
+key: xnone -1
+  decomp: *
+    reasmb: Что?
+    reasmb: Непонял!?
+    reasmb: Чё чё, а по русски!?
+   
+key: sorry 0
+  decomp: *
+    reasmb: Please don't apologise.
+    
+key: привет 0
+  decomp: *
+    reasmb: Как жизнь?   
+    reasmb: ты кто?   
+
+key: копьютер 2
+  decomp: *
+    reasmb: проблумы с компом ?
+    reasmb: А что именно с компом ?
+
+key: remember 5
+  decomp: * i remember *
+    reasmb: Do you often think of (2) ?
+    reasmb: Does thinking of (2) bring anything else to mind ?
+    reasmb: What else do you recollect ?
+    reasmb: Why do you remember (2) just now ?
+    reasmb: What in the present situation reminds you of (2) ?
+    reasmb: What is the connection between me and (2) ?
+    reasmb: What else does (2) remind you of ?
+  decomp: * do you remember *
+    reasmb: Did you think I would forget (2) ?
+    reasmb: Why do you think I should recall (2) now ?
+    reasmb: What about (2) ?
+    reasmb: goto what
+    reasmb: You mentioned (2) ?
+  decomp: * you remember *
+    reasmb: How could I forget (2) ?
+    reasmb: What about (2) should I remember ?
+    reasmb: goto you
+
+key: помнить 5
+	decomp: * ты помнить *
+    	reasmb: How could I forget (2) ?
+    	reasmb: What about (2) should I remember ?
+    	reasmb: goto ты
+	decomp: * помнить *
+		reasmb: что помню ?
+
+key: ты 0
+  decomp: * ты *
+    reasmb: We were discussing you -- not me.
+    reasmb: Oh, I (2) ?
+key: my 2
+  decomp: * my* @family *
+    reasmb: Tell me more about your family.
+    reasmb: Who else in your family (4) ?
+    reasmb: Your (3) ?
+    reasmb: What else comes to mind when you think of your (3) ?
+  decomp: * my *
+    reasmb: Your (2) ?
+    reasmb: Why do you say your (2) ?
+    reasmb: Does that suggest anything else which belongs to you ?
+    reasmb: Is it important to you that your (2) ?
+    reasm_for_memory: Let's discuss further why your (2).
+    reasm_for_memory: Earlier you said your (2).
+    reasm_for_memory: But your (2).
+    reasm_for_memory: Does that have anything to do with the fact that your (2) ?
+    
+    
